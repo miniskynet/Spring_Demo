@@ -11,11 +11,8 @@ public class EmployeeService {
     @Autowired
     private EmployeeRepository employeeRepository;
 
-    //nicStartsWith
-    //employeeWorkYears
-
-    public Employee addEmployee(Employee employee){
-        return employeeRepository.save(employee);
+    public void addEmployee(Employee employee){
+        employeeRepository.save(employee);
     }
 
     public List<String> viewEmployeeByName() {
@@ -28,8 +25,6 @@ public class EmployeeService {
         }
         return allEmployeesByName;
     }
-
-    //getEmployeesByDepartmentName
 
     public Employee updateEmployee(Employee employee, int employeeId){
 
